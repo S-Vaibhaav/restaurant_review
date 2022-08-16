@@ -12,7 +12,7 @@
      console.log('Connected To DB');
  }); 
  module.exports = connection;
- var mysql = require('mysql');
+ //var mysql = require('mysql');
 
 // var connection = mysql.createConnection({
 
