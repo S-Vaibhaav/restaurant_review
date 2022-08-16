@@ -5,7 +5,7 @@ function getSearchedRestaurants() {
     searchInput.addEventListener("keyup", (e) => {
         searchValue = searchInput.value;
         var search = new XMLHttpRequest();
-        search.open('POST', 'http://127.0.0.1:8080/search', true)
+        search.open('POST', 'http://ec2-44-207-84-110.compute-1.amazonaws.com:8080/search', true)
         search.setRequestHeader("Content-type", "application/json")
         search.onload = function () {
             restaurant_array = JSON.parse(search.responseText);
@@ -26,7 +26,7 @@ function getFilteredRestaurants() {
     // if there is only cuisine filter
     if (cuisine != "empty" && region == "empty" && price == "empty"){
         var search = new XMLHttpRequest();
-            search.open('POST', 'http://127.0.0.1:8080/cuisine', true)
+            search.open('POST', 'http://ec2-44-207-84-110.compute-1.amazonaws.com:8080/cuisine', true)
             search.setRequestHeader("Content-type", "application/json")
             search.onload = function () {
                 restaurant_array = JSON.parse(search.responseText);
@@ -41,7 +41,7 @@ function getFilteredRestaurants() {
     else if (cuisine == "empty" && region != "empty" && price == "empty"){
         console.log(region)
         var search = new XMLHttpRequest();
-            search.open('POST', 'http://127.0.0.1:8080/region', true)
+            search.open('POST', 'http://ec2-44-207-84-110.compute-1.amazonaws.com:8080/region', true)
             search.setRequestHeader("Content-type", "application/json")
             search.onload = function () {
                 restaurant_array = JSON.parse(search.responseText);
@@ -70,7 +70,7 @@ function getFilteredRestaurants() {
     else if (cuisine != "empty" && region != "empty" && price =="empty"){
         console.log(cuisine,region)
         var cuisineRegion = new XMLHttpRequest();
-            cuisineRegion.open('POST', 'http://127.0.0.1:8080/cuisine/region', true)
+            cuisineRegion.open('POST', 'http://ec2-44-207-84-110.compute-1.amazonaws.com:8080/cuisine/region', true)
             cuisineRegion.setRequestHeader("Content-type", "application/json")
             cuisineRegion.onload = function () {
                 restaurant_array = JSON.parse(cuisineRegion.responseText);
@@ -85,7 +85,7 @@ function getFilteredRestaurants() {
     else if (cuisine != "empty" && region == "empty" && price !="empty"){
         console.log(cuisine,region)
         var cuisineRegion = new XMLHttpRequest();
-            cuisineRegion.open('POST', 'http://127.0.0.1:8080/cuisine/price', true)
+            cuisineRegion.open('POST', 'http://ec2-44-207-84-110.compute-1.amazonaws.com:8080/cuisine/price', true)
             cuisineRegion.setRequestHeader("Content-type", "application/json")
             cuisineRegion.onload = function () {
                 restaurant_array = JSON.parse(cuisineRegion.responseText);
@@ -100,7 +100,7 @@ function getFilteredRestaurants() {
     else if (cuisine == "empty" && region != "empty" && price !="empty"){
         console.log(cuisine,region)
         var cuisineRegion = new XMLHttpRequest();
-            cuisineRegion.open('POST', 'http://127.0.0.1:8080/region/price', true)
+            cuisineRegion.open('POST', 'http://ec2-44-207-84-110.compute-1.amazonaws.com:8080/region/price', true)
             cuisineRegion.setRequestHeader("Content-type", "application/json")
             cuisineRegion.onload = function () {
                 restaurant_array = JSON.parse(cuisineRegion.responseText);
@@ -115,7 +115,7 @@ function getFilteredRestaurants() {
     else if (cuisine != "empty" && region != "empty" && price !="empty"){
         console.log(cuisine,region)
         var cuisineRegion = new XMLHttpRequest();
-            cuisineRegion.open('POST', 'http://127.0.0.1:8080/cuisine/region/price', true)
+            cuisineRegion.open('POST', 'http://ec2-44-207-84-110.compute-1.amazonaws.com:8080/cuisine/region/price', true)
             cuisineRegion.setRequestHeader("Content-type", "application/json")
             cuisineRegion.onload = function () {
                 restaurant_array = JSON.parse(cuisineRegion.responseText);
@@ -152,7 +152,7 @@ function sortRestaurants() {
 
 function getAllRestaurants() {
     var request = new XMLHttpRequest();
-    request.open('GET', 'http://127.0.0.1:8080/restaurants', true)
+    request.open('GET', 'http://ec2-44-207-84-110.compute-1.amazonaws.com:8080/restaurants', true)
     request.onload = function () {
         restaurant_array = JSON.parse(request.responseText);
         console.log(restaurant_array)
