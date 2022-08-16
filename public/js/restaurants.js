@@ -1,7 +1,7 @@
 // function to get featured restaurant's details to display in card
 function getFeaturedRestaurants(){
     var request = new XMLHttpRequest();
-    request.open('GET', 'http://127.0.0.1:8080/featuredRestaurants', true)
+    request.open('GET', 'http://ec2-44-207-84-110.compute-1.amazonaws:8080/featuredRestaurants', true)
     request.onload = function(){
         restaurant_array = JSON.parse(request.responseText);
         console.log(restaurant_array)
