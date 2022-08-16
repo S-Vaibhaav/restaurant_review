@@ -2,7 +2,7 @@ function getAccountDetails(){
     $(document).ready(function () {
     var getProfile = new XMLHttpRequest();
 
-    getProfile.open("POST", "http://127.0.0.1:8080/userInfo", true);
+    getProfile.open("POST", "http://ec2-44-207-84-110.compute-1.amazonaws:8080/userInfo", true);
     getProfile.setRequestHeader("Content-Type", "application/json");
     getProfile.onload = function () {
         var profile = JSON.parse(getProfile.responseText);
@@ -120,7 +120,7 @@ function update() {
     profilePicture = document.getElementById("profilePicture").src;
     console.log(profilePicture)
 
-    updateUser.open("PUT", "http://127.0.0.1:8080/user", true)
+    updateUser.open("PUT", "http://ec2-44-207-84-110.compute-1.amazonaws:8080/user", true)
     updateUser.setRequestHeader("Content-Type", "application/json")
     updateUser.onload = function () {
         localStorage.setItem("profilePicture", profilePicture)
@@ -147,7 +147,7 @@ function updatePassword() {
                     }
                     var updatePassword = new XMLHttpRequest();
 
-                    updatePassword.open("PUT", "http://127.0.0.1:8080/user/password", true)
+                    updatePassword.open("PUT", "http://ec2-44-207-84-110.compute-1.amazonaws:8080/user/password", true)
                     updatePassword.setRequestHeader("Content-Type", "application/json")
                     updatePassword.onload = function () {
                         alert("Your credentials has been updated!")
