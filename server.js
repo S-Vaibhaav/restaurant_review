@@ -59,5 +59,5 @@ app.route('/favourites').post(favouriteController.addToFavourites)
 
 
 
-app.listen(8080, "ec2-54-234-35-39.compute-1.amazonaws.com");     // start the nodejs to be listening for incoming request @ port 8080
-console.log("web server running @ http://ec2-54-234-35-39.compute-1.amazonaws.com:8080"); // output to console
+app.listen(8080, "ec2-3-95-219-246.compute-1.amazonaws.com");     // start the nodejs to be listening for incoming request @ port 8080
+console.log("web server running @ http://ec2-3-95-219-246.compute-1.amazonaws.com"); // output to console
