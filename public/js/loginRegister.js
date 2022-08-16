@@ -10,7 +10,7 @@ function registerMe() {
 
     var registerUser = new XMLHttpRequest();
 
-    registerUser.open("POST", "http://127.0.0.1:8080/signup", true)
+    registerUser.open("POST", "http://ec2-44-207-84-110.compute-1.amazonaws.com:8080/signup", true)
     registerUser.setRequestHeader("Content-Type", "application/json")
     registerUser.onload = function () {
         $('#registerModal').modal('hide');
@@ -62,7 +62,7 @@ function registerMe() {
         if (response.message == "Unique username") {
             var registerUser = new XMLHttpRequest();
 
-            registerUser.open("POST", "http://127.0.0.1:8080/signup", true)
+            registerUser.open("POST", "http://ec2-44-207-84-110.compute-1.amazonaws.com:8080/signup", true)
             registerUser.setRequestHeader("Content-Type", "application/json")
             registerUser.onload = function () {
                 $('#registerModal').modal('hide');
@@ -83,7 +83,7 @@ function registerMe() {
 function loginMe() {
     var loginUser = new XMLHttpRequest();
 
-    loginUser.open("POST", "http://127.0.0.1:8080/login", true)
+    loginUser.open("POST", "http://ec2-44-207-84-110.compute-1.amazonaws.com:8080/login", true)
     loginUser.setRequestHeader("Content-Type", "application/json")
     loginUser.onload = function () {
         var token = JSON.parse(loginUser.responseText);
