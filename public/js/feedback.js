@@ -1,7 +1,7 @@
 function sendFeedback() {
     var feedbackUser = new XMLHttpRequest();
 
-    feedbackUser.open("POST", "http://127.0.0.1:8080/feedback", true)
+    feedbackUser.open("POST", "http://ec2-44-207-84-110.compute-1.amazonaws:8080/feedback", true)
     feedbackUser.setRequestHeader("Content-Type", "application/json")
     feedbackUser.onload = function () {
         var token = JSON.parse(feedbackUser.responseText);
