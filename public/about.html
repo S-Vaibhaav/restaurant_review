@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>FoodComa Website</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/mystyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+
+    <script>
+        token = sessionStorage.getItem('token');
+        var map, infoWindow;
+    </script>
+    
+</head>
+
+<body style ="background-color: #EEEEEE;">
+    <!-- Include top navigation here -->
+    <div w3-include-html="top-navigation.html"></div>
+    <div class="mainBox" >
+        <img src = "images/about.png" style="width: 1536px; height: 230px;"></img>  
+    </div>
+    <div class="container" style="background-color: white; width: 1200px; height: fit-content;">
+        <h2 style="font-size: 33px; font-weight: bold; padding-top: 20px; padding-left: 20px;">About Us</h2>
+        <h5 style="font-weight: normal; font: 15px; padding-left: 20px; padding-top: 10px;">The purpose of FoodComa is to allow Singaporeans to easily find the top restaurants in Singapore and to dine in at the restaurants that serve them the delicious food that they desire. 
+        <br>
+        <br>
+            Food that makes them fall into a 'FoodComa' afterwards.</h5>
+        <h2 style="font-size: 25px; font-weight: bold; padding-top: 20px; padding-left: 20px; text-decoration: underline;">Contact Us</h2>
+        <h5 style="font-weight: normal; font: 15px; padding-left: 20px; padding-top: 10px;">FoodComa is a service offered by FoodComa Singapore Pte Ltd
+            <br>FoodComa Singapore Pte Ltd, 33 Tampines Road # 27-01, Tampines 35, Singapore 580234
+            <br>
+            <br>
+            <span>Email: </span><span style="color: #B76931;">foodComa.sg@gmail.com </span>
+            <br>
+            <span>Phone: </span><span style="color: #B76931;">(+65) 6246 7489 </span> 
+        </h5>
+        <br>
+        <h5 style="font-weight: bold; padding-left: 20px; padding-bottom: 20px;"><span>Wish to send feedback? </span><span style="color: #B76931; cursor: pointer;" data-toggle="modal" data-target="#feedbackModal">Click here! </span></h5>
+
+    </div>
+    
+ 
+    <div w3-include-html="register-modal.html"></div>
+    <div w3-include-html="login-modal.html"></div>
+    <div w3-include-html="feedbackModal.html"></div>
+    
+
+
+
+    <br><br>
+    <!-- Include the footer here -->
+    <div w3-include-html="footer.html"></div>
+</body>
+<script src="https://www.w3schools.com/lib/w3.js"></script>
+<script>
+    //to bring in other HTML on the fly into this page
+    w3.includeHTML();
+</script>
+
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<script src="https://kit.fontawesome.com/86ec7c1143.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAvlr9Xo6bH0wunhgQ81__K6DIddiKd7H0"></script>
+<script src="js/app.js"></script>
+<script src="js/loginRegister.js"></script>
+<script src="js/checktoken.js"></script>
+<script src="js/feedback.js"></script>
+<script src="js/restaurants.js"></script>
+
+
+</html>
