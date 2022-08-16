@@ -53,5 +53,5 @@ connection.query(sql, function (err,result){
 
 }
 
-app.listen(3000);
+//app.listen(3000);
 console.log("http://ec2-54-234-35-39.compute-1.amazonaws.com:3000/mysql%22");
