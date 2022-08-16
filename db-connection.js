@@ -54,4 +54,4 @@ connection.query(sql, function (err,result){
 }
 
 app.listen(3000);
-console.log("http://127.0.0.1:3000/mysql%22");
+console.log("http://54.234.35.39:3000/mysql%22");
